@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2_TEST_Assignment Info & Interactive Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F8F6F0; /* Pearl White Background */
+            color: black;
+            text-align: center;
+        }
+        .info-box {
+            background-color: #4B0F0F; /* Dark Burgundy */
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #7A1F1F;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+        h1, h2, h3 {
+            margin: 10px 0;
+        }
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            font-size: 18px;
+            text-align: left;
+            background-color: #5A1E1E; /* Burgundy Table Background */
+            color: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #7A1F1F;
+        }
+        th {
+            background-color: #3A0E0E;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #6A2A2A;
+        }
+        tr:nth-child(odd) {
+            background-color: #5A1E1E;
+        }
+        a {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .button-container {
+            margin: 20px;
+        }
+        .button-container button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: #444;
+            color: white;
+        }
+        .button-container button.active {
+            background-color: #FFD700;
+            color: black;
+        }
+        .output-container {
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 300px;
+            height: auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="info-box">
+        <h1>9668731 Prosper Mwakyusa</h1>
+        <h2>COMP804: Web Security</h2>
+        <h3>Assignment 1, due at the end of Week 5</h3>
+    </div>
+    <table>
+        <tr>
+            <th>Activity</th>
+            <th>Date</th>
+        </tr>
+        <tr>
+            <td>First day to enroll for re-enrolling (continuing students)</td>
+            <td>18 Nov 2024</td>
+        </tr>
+        <tr>
+            <td>First day to enroll for new students (commencing students)</td>
+            <td>02 Dec 2024</td>
+        </tr>
+        <tr>
+            <td>Orientation</td>
+            <td>24 Feb - 27 Feb 2025 (Wollongong campus)<br><a href="#">Further information about Orientation is available here</a></td>
+        </tr>
+        <tr>
+            <td>Lectures Commence (weeks 1-7)</td>
+            <td>03 Mar - 18 Apr 2025</td>
+        </tr>
+        <tr>
+            <td>Last day to enroll / add subjects yourself</td>
+            <td>14 Mar 2025</td>
+        </tr>
+        <tr>
+            <td>Last day to enroll / add subjects with Head of Students approval</td>
+            <td>21 Mar 2025</td>
+        </tr>
+        <tr>
+            <td><strong>CENSUS DATE</strong><br>
+                <ul>
+                    <li>Fees due</li>
+                    <li>Last day to withdraw from subjects without paying for them</li>
+                    <li>HECS / FEE HELP debt reporting date</li>
+                    <li>Last day to change HECS / FEE HELP billing option</li>
+                </ul>
+                <a href="#">Learn more about Census date ></a>
+            </td>
+            <td>31 Mar 2025</td>
+        </tr>
+        <tr>
+            <td>Student Services and Amenities Fees Due</td>
+            <td>01 Apr 2025</td>
+        </tr>
+        <tr>
+            <td>Last day to withdraw without academic penalty - subject deleted from record</td>
+            <td>09 May 2025</td>
+        </tr>
+        <tr>
+            <td>Fail grade recorded if subject withdrawn after this date</td>
+            <td>09 May 2025</td>
+        </tr>
+        <tr>
+            <td>Mid-Session Recess (1 week)</td>
+            <td>21 Apr - 25 Apr 2025</td>
+        </tr>
+        <tr>
+            <td>Lectures Recommence (weeks 8-13)</td>
+            <td>28 Apr - 06 Jun 2025</td>
+        </tr>
+        <tr>
+            <td>Study Recess (1 week)</td>
+            <td>09 Jun - 13 Jun 2025</td>
+        </tr>
+        <tr>
+            <td>Exams (2 weeks)</td>
+            <td>14 Jun - 26 Jun 2025</td>
+        </tr>
+        <tr>
+            <td>Mid-Year Recess / End of session break (4 weeks)</td>
+            <td>30 Jun - 25 Jul 2025</td>
+        </tr>
+        <tr>
+            <td>Release of Results</td>
+            <td>10 Jul 2025</td>
+        </tr>
+        <tr>
+            <td>Supplementary and deferred exam period</td>
+            <td>21 Jul - 25 Jul 2025</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <h2 style="color: black;">10 DIFFERENT TYPES OF WEB ATTACKS</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+
+        <tr>
+            <td>1. Cross-Site Scripting (XSS)<br><br><img src="Cross_Site_Scripting.png" alt="Cross Site Scripting" width="900px"><br><br>
+                <a href="https://www.vmware.com/topics/cross-site-scripting">Source</a><br></td>
+
+            <td>Cross-site scripting (XSS) attacks deceive a browser into injecting harmful client-side scripts into a victim’s browser, 
+                which then executes them automatically upon receipt. This malicious code can:<br><ul><li>Steal Sensitive Data</li><br><li>Install Additional Malware</li>
+                    <br><li>Redirect the user to a fraudeulent website</li></ul> <a href="https://www.vmware.com/topics/cross-site-scripting">Source</a><br></td>
+        </tr>
+
+        <tr>
+            <td>2. SQL Injection<br><br><img src="SQL_Injection.png" alt="SQL Injection" width="900px"><br>
+                <br><a href="https://www.dnsstuff.com/sql-injection">Source</a><br></td>
+
+            <td>SQL is a programming language used for managing large datasets within a database. It is primarily utilised to retrieve, insert, update, and remove data from these databases.
+                <br><br>A website or application becomes vulnerable to SQL injection when it accepts user input that is directly incorporated into an SQL query 
+                <br><br>SQL injection occurs when an attacker inserts malicious code into user input fields, which, when processed as part of a query, executes harmful commands within the database.
+                <br><br><a href="https://www.dnsstuM.com/sql-injection">Source</a></td>
+        </tr>
+
+        <tr>
+            <td>3. Directory Traversal<br><br><img src="Directory_Traversal.png" alt="Directory Traversal" width="900px">
+                <br><a href="https://portswigger.net/web-security/file-path-traversal"><br>Source<br></a><br></td>
+            <td>Path traversal, also known as directory traversal, is a vulnerability that allows attackers to access arbitrary files on the server hosting an application.
+                <br><br>This can include: <br>
+                <ul>
+                    <li>Application Code & Data</li><br>
+                    <li>Credentials for back-end Systems</li><br>
+                    <li>Sensitive Operating System Files</li><br>
+                    <br>
+                </ul>
+                In some cases, an attacker may also gain the ability to write to files on the server, potentially altering application data or behaviour and even gaining complete control over the system.
+                <br><br><a href="https://portswigger.net/web-security/file-path-traversal">Source</a></td>
+        </tr>
+
+        <tr>
+            <td>4. Man-in-the-Middle (MiTM)<br><br><img src="MiTM_Attacks.png" alt="MiTM Attack" width="900px">
+                <br><br><a href="https://www.fortinet.com/resources/cyberglossary/man-in-the-middle-attack">Source</a></td>
+            <td>A Man-in-the-Middle (MitM) attack is a cyberattack where attackers exploit weak web-based protocols to secretly intercept and manipulate communication between two parties, allowing them to steal sensitive data.
+
+                <br><br>Those involved in email exchanges, text messages, or video calls are typically unaware that an attacker has infiltrated their conversation and is actively capturing their data.
+
+                <br><br>While many cyberattacks operate discreetly, some MitM attacks take a more direct approach. 
+                
+                <br><br>These can involve bots generating convincing text messages impersonating voices during calls, or spoofing entire communication systems to extract valuable data from victims' devices.
+                 <br><br><a href="https://www.fortinet.com/resources/cyberglossary/man-in-the-middle-attack"><br><br>Source</a></td>
+        </tr>
+
+        <tr>
+            <td>5. Distributed Denial-of-Service (DDoS)<br><br><img src="DDos.png" alt="DDoS Attack" width="900px">
+                <br><br><a href="https://www.wallarm.com/what/how-to-stop-ddos-attacks-with-a-small-budget">Source</a></td>
+            <td>A distributed denial-of-service (DDoS) attack is a malicious attempt to disrupt the normal functioning of a targeted server, service, or network by flooding it with excessive internet traffic.
+                <br><br>DDoS attacks leverage multiple compromised devices, including computers and IoT devices, to generate overwhelming traffic directed at the target.
+                <br><br>In simple terms, a DDoS attack is similar to an unexpected traffic jam blocking a highway, preventing legitimate users from reaching their destination.
+                 <a href="https://www.cloudflare.com/en-au/learning/ddos/what-is-a-ddos-attack/"><br><br>Source</a></td>
+        </tr>
+
+        <tr>
+            <td>6. Fuzz Testing (Fuzzing)<br><br><img src="Fuzz_Testing.png" alt="Fuzz Testing">
+                <br><br><a href="https://www.geeksforgeeks.org/software-testing-fuzz-testing/">Source</a></td>
+            <td>Fuzz testing operates by deliberately injecting malformed inputs into a system to uncover vulnerabilities and failures.
+                <br><br>A fuzzer consists of three main components: <br>
+                <ul>
+                    <li>A poet, responsible for generating malformed inputs or test cases.</li><br>
+                    <li>A courier, which delivers these test cases to the target software.</li><br> 
+                    <li>An oracle, which monitors the system to detect any resulting failures.</li>
+                </ul>
+                <a href="https://www.blackduck.com/glossary/what-is-fuzz-testing.html">Source</a></td>
+        </tr>
+
+        <tr>
+            <td>7. Brute Force Attack<br><br><img src="brute_force.png" alt="Brute Force" width="900px">
+                <br><br><a href="https://www.imperva.com/learn/application-security/brute-force-attack/">Source</a></td>
+            <td>A brute force attack is a commonly used hacking technique, reportedly responsible for around five percent of confirmed security breaches.
+                <br><br>This attack method involves systematically guessing usernames and passwords to gain unauthorised access to a system.
+
+                <br><br>Despite its simplicity, brute force attacks are highly effective and have a significant success rate.
+                 <br><br><a href="https://www.imperva.com/learn/application-security/brute-force-attack/">Source</a></td>
+        </tr>
+
+        <tr>
+            <td>8. Drive-By Downloads<br><br><img src="drive_by_download.png" alt="Drive By Download" width="900px">
+                <br><br><a href="https://www.kaspersky.com/resource-center/definitions/drive-by-download">Source</a></td>
+            <td>Drive-by download attacks occur when malicious programs are installed on a device without the user’s consent.
+                <br><br>These attacks can be found across the web, even on legitimate websites, making them a widespread threat.
+                <br><br>There are two main variants of Drive by Download attacks:<b></b>
+                <ul>
+                    <li>Potentially unwanted programs or applications (PUPs/PUAs) <br>– Non-malicious but intrusive software that may negatively impact system performance.</li><br>
+                    <li>Malware-loaded attacks <br>– Downloads that contain harmful software designed to compromise or control a device.</li>
+                    
+                </ul>
+                 <a href="https://www.kaspersky.com/resource-center/definitions/drive-by-download">Source</a></td>
+        </tr>
+
+        <tr>
+            <td>9. Broken Authentication<br><br><img src="broken_authentication.png" alt="Broken Authentication" width="900px">
+                <br><br><a href="https://medium.com/purplebox/broken-authentication-d4b00e328c0f">Source</a></td>
+            <td>Broken authentication refers to security vulnerabilities in a web application’s authentication process or session management, which can allow unauthorised users to gain access to the system. 
+
+                <br><br>These vulnerabilities often arise when authentication, session management, or password handling is improperly implemented, making the application susceptible to cyberattacks.
+                
+                <br><br>Session management is the process of maintaining a user’s state and data across multiple requests. When a user logs in, their credentials are verified, and a session is established.
+                
+                <br><br>This session remains active as the user interacts with the application. However, if session management is flawed, it can lead to broken authentication, potentially exposing user accounts to unauthorised access.
+                 <br><br><a href="https://medium.com/purplebox/broken-authentication-d4b00e328c0f">Source</a></td>
+        </tr>
+
+        <tr>
+            <td>10. Phishing<br><br><img src="Phishing.png" alt="Phishing" width="900px">
+                <br><br><a href="https://www.technologysolutions.net/wp-content/uploads/2023/07/Phising-Awerness-scaled-2560x1280.jpeg">Source</a></td>
+            <td>Phishing is a cybercrime tactic used to deceive individuals into revealing personal information.
+                <br><br>TAttackers send fraudulent emails or text messages, often posing as trusted organizations, to trick victims into sharing sensitive data such as online banking credentials, credit card details, or passwords.
+                <br><br>Falling victim to phishing can lead to data breaches, financial loss, or identity theft.
+                <br><br><a href="https://www.cyber.gov.au/threats/types-threats/phishing">Source</a></td>
+        </tr>
+
+    </table>
+
+    <h2>Interactive Buttons Task</h2>
+    <div class="button-container">
+        <button id="cat" onclick="showContent('cat')">Cat</button>
+        <button id="dog" onclick="showContent('dog')">Dog</button>
+        <button id="frog" onclick="showContent('frog')">Frog</button>
+    </div>
+
+    <div class="output-container">
+        <input type="text" id="message" readonly style="width: 300px; text-align: center; font-size: 16px;">
+        <p id="statusMessage" style="font-weight: bold;"></p>
+        <div class="image-container">
+            <img id="displayImage" src="" alt="Animal" style="display: none; width: 500px;">
+        </div>
+    </div>
+    <h3>Image Sources</h3>
+    <br><br><a href="https://metro-goldwyn-mayer-cartoons.fandom.com/wiki/Tom_Cat">Cat Image</a>
+    <br><br><a href="https://courage.fandom.com/wiki/Courage">Dog Image</a>
+    <br><br><a href="https://en.namu.wiki/w/%EB%82%98%EB%B9%88">Frog Image</a>
+
+    <br><br>
+    <h2>References</h2>
+    <br><br><img src="References.png" alt="Cross Site Scripting" width="900px">
+    <script>
+        function showContent(animal) {
+            document.getElementById('message').value = 'User clicks ' + animal.charAt(0).toUpperCase() + animal.slice(1);
+            document.getElementById('statusMessage').innerText = animal.charAt(0).toUpperCase() + animal.slice(1) + ' is clicked';
+            document.getElementById('displayImage').src = animal + '.png';
+            document.getElementById('displayImage').style.display = 'block';
+            
+            let buttons = document.querySelectorAll('.button-container button');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            document.getElementById(animal).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
